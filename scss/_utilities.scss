@@ -7,13 +7,14 @@ $utilities: map-merge(
     // scss-docs-start utils-vertical-align
     "align": (
       property: vertical-align,
-      class: align,
+      class: janes-align,
       values: baseline top middle bottom text-bottom text-top
     ),
     // scss-docs-end utils-vertical-align
     // scss-docs-start utils-float
     "float": (
       responsive: true,
+      class: janes-float,
       property: float,
       values: (
         start: left,
@@ -27,6 +28,7 @@ $utilities: map-merge(
     "object-fit": (
       responsive: true,
       property: object-fit,
+      class: janes-object-fit,
       values: (
         contain: contain,
         cover: cover,
@@ -40,6 +42,7 @@ $utilities: map-merge(
     // scss-docs-start utils-opacity
     "opacity": (
       property: opacity,
+      class: janes-opacity,
       values: (
         0: 0,
         25: .25,
@@ -52,6 +55,7 @@ $utilities: map-merge(
     // scss-docs-start utils-overflow
     "overflow": (
       property: overflow,
+      class: janes-overflow,
       values: auto hidden visible scroll,
     ),
     "overflow-x": (
@@ -60,6 +64,7 @@ $utilities: map-merge(
     ),
     "overflow-y": (
       property: overflow-y,
+      class: janes-overflow-y,
       values: auto hidden visible scroll,
     ),
     // scss-docs-end utils-overflow
@@ -68,14 +73,14 @@ $utilities: map-merge(
       responsive: true,
       print: true,
       property: display,
-      class: d,
+      class: janes-d,
       values: inline inline-block block grid inline-grid table table-row table-cell flex inline-flex none
     ),
     // scss-docs-end utils-display
     // scss-docs-start utils-shadow
     "shadow": (
       property: box-shadow,
-      class: shadow,
+      class: janes-shadow,
       values: (
         null: var(--#{$prefix}box-shadow),
         sm: var(--#{$prefix}box-shadow-sm),
@@ -88,36 +93,39 @@ $utilities: map-merge(
     "focus-ring": (
       css-var: true,
       css-variable-name: focus-ring-color,
-      class: focus-ring,
+      class: janes-focus-ring,
       values: map-loop($theme-colors-rgb, rgba-css-var, "$key", "focus-ring")
     ),
     // scss-docs-end utils-focus-ring
     // scss-docs-start utils-position
     "position": (
       property: position,
+      class: janes-position,
       values: static relative absolute fixed sticky
     ),
     "top": (
       property: top,
+      class: janes-top,
       values: $position-values
     ),
     "bottom": (
       property: bottom,
+      class: janes-bottom,
       values: $position-values
     ),
     "start": (
       property: left,
-      class: start,
+      class: janes-start,
       values: $position-values
     ),
     "end": (
       property: right,
-      class: end,
+      class: janes-end,
       values: $position-values
     ),
     "translate-middle": (
       property: transform,
-      class: translate-middle,
+      class: janes-translate-middle,
       values: (
         null: translate(-50%, -50%),
         x: translateX(-50%),
@@ -128,6 +136,7 @@ $utilities: map-merge(
     // scss-docs-start utils-borders
     "border": (
       property: border,
+      class: janes-border,
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
@@ -135,6 +144,7 @@ $utilities: map-merge(
     ),
     "border-top": (
       property: border-top,
+      class: janes-border-top,
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
@@ -142,7 +152,7 @@ $utilities: map-merge(
     ),
     "border-end": (
       property: border-right,
-      class: border-end,
+      class: janes-border-end,
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
@@ -150,6 +160,7 @@ $utilities: map-merge(
     ),
     "border-bottom": (
       property: border-bottom,
+      class: janes-border-bottom,
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
@@ -157,7 +168,7 @@ $utilities: map-merge(
     ),
     "border-start": (
       property: border-left,
-      class: border-start,
+      class: janes-border-start,
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
@@ -165,7 +176,7 @@ $utilities: map-merge(
     ),
     "border-color": (
       property: border-color,
-      class: border,
+      class: janes-border,
       local-vars: (
         "border-opacity": 1
       ),
@@ -173,17 +184,17 @@ $utilities: map-merge(
     ),
     "subtle-border-color": (
       property: border-color,
-      class: border,
+      class: janes-border,
       values: $utilities-border-subtle
     ),
     "border-width": (
       property: border-width,
-      class: border,
+      class: janes-border,
       values: $border-widths
     ),
     "border-opacity": (
       css-var: true,
-      class: border-opacity,
+      class: janes-border-opacity,
       values: (
         10: .1,
         25: .25,
@@ -197,7 +208,7 @@ $utilities: map-merge(
     // scss-docs-start utils-sizing
     "width": (
       property: width,
-      class: w,
+      class: janes-w,
       values: (
         25: 25%,
         50: 50%,
@@ -208,22 +219,22 @@ $utilities: map-merge(
     ),
     "max-width": (
       property: max-width,
-      class: mw,
+      class: janes-mw,
       values: (100: 100%)
     ),
     "viewport-width": (
       property: width,
-      class: vw,
+      class: janes-vw,
       values: (100: 100vw)
     ),
     "min-viewport-width": (
       property: min-width,
-      class: min-vw,
+      class: janes-min-vw,
       values: (100: 100vw)
     ),
     "height": (
       property: height,
-      class: h,
+      class: janes-h,
       values: (
         25: 25%,
         50: 50%,
@@ -234,17 +245,17 @@ $utilities: map-merge(
     ),
     "max-height": (
       property: max-height,
-      class: mh,
+      class: janes-mh,
       values: (100: 100%)
     ),
     "viewport-height": (
       property: height,
-      class: vh,
+      class: janes-vh,
       values: (100: 100vh)
     ),
     "min-viewport-height": (
       property: min-height,
-      class: min-vh,
+      class: janes-min-vh,
       values: (100: 100vh)
     ),
     // scss-docs-end utils-sizing
@@ -253,18 +264,19 @@ $utilities: map-merge(
     "flex": (
       responsive: true,
       property: flex,
+      class: janes-flex,
       values: (fill: 1 1 auto)
     ),
     "flex-direction": (
       responsive: true,
       property: flex-direction,
-      class: flex,
+      class: janes-flex,
       values: row column row-reverse column-reverse
     ),
     "flex-grow": (
       responsive: true,
       property: flex-grow,
-      class: flex,
+      class: janes-flex,
       values: (
         grow-0: 0,
         grow-1: 1,
@@ -273,7 +285,7 @@ $utilities: map-merge(
     "flex-shrink": (
       responsive: true,
       property: flex-shrink,
-      class: flex,
+      class: janes-flex,
       values: (
         shrink-0: 0,
         shrink-1: 1,
@@ -282,12 +294,13 @@ $utilities: map-merge(
     "flex-wrap": (
       responsive: true,
       property: flex-wrap,
-      class: flex,
+      class: janes-flex,
       values: wrap nowrap wrap-reverse
     ),
     "justify-content": (
       responsive: true,
       property: justify-content,
+      class: janes-justify-content,
       values: (
         start: flex-start,
         end: flex-end,
@@ -300,6 +313,7 @@ $utilities: map-merge(
     "align-items": (
       responsive: true,
       property: align-items,
+      class: janes-align-items,
       values: (
         start: flex-start,
         end: flex-end,
@@ -311,6 +325,7 @@ $utilities: map-merge(
     "align-content": (
       responsive: true,
       property: align-content,
+      class: janes-align-content,
       values: (
         start: flex-start,
         end: flex-end,
@@ -323,6 +338,7 @@ $utilities: map-merge(
     "align-self": (
       responsive: true,
       property: align-self,
+      class: janes-align-self,
       values: (
         auto: auto,
         start: flex-start,
@@ -335,6 +351,7 @@ $utilities: map-merge(
     "order": (
       responsive: true,
       property: order,
+      class: janes-order,
       values: (
         first: -1,
         0: 0,
@@ -352,148 +369,148 @@ $utilities: map-merge(
     "margin": (
       responsive: true,
       property: margin,
-      class: m,
+      class: janes-m,
       values: map-merge($spacers, (auto: auto))
     ),
     "margin-x": (
       responsive: true,
       property: margin-right margin-left,
-      class: mx,
+      class: janes-mx,
       values: map-merge($spacers, (auto: auto))
     ),
     "margin-y": (
       responsive: true,
       property: margin-top margin-bottom,
-      class: my,
+      class: janes-my,
       values: map-merge($spacers, (auto: auto))
     ),
     "margin-top": (
       responsive: true,
       property: margin-top,
-      class: mt,
+      class: janes-mt,
       values: map-merge($spacers, (auto: auto))
     ),
     "margin-end": (
       responsive: true,
       property: margin-right,
-      class: me,
+      class: janes-me,
       values: map-merge($spacers, (auto: auto))
     ),
     "margin-bottom": (
       responsive: true,
       property: margin-bottom,
-      class: mb,
+      class: janes-mb,
       values: map-merge($spacers, (auto: auto))
     ),
     "margin-start": (
       responsive: true,
       property: margin-left,
-      class: ms,
+      class: janes-ms,
       values: map-merge($spacers, (auto: auto))
     ),
     // Negative margin utilities
     "negative-margin": (
       responsive: true,
       property: margin,
-      class: m,
+      class: janes-m,
       values: $negative-spacers
     ),
     "negative-margin-x": (
       responsive: true,
       property: margin-right margin-left,
-      class: mx,
+      class: janes-mx,
       values: $negative-spacers
     ),
     "negative-margin-y": (
       responsive: true,
       property: margin-top margin-bottom,
-      class: my,
+      class: janes-my,
       values: $negative-spacers
     ),
     "negative-margin-top": (
       responsive: true,
       property: margin-top,
-      class: mt,
+      class: janes-mt,
       values: $negative-spacers
     ),
     "negative-margin-end": (
       responsive: true,
       property: margin-right,
-      class: me,
+      class: janes-me,
       values: $negative-spacers
     ),
     "negative-margin-bottom": (
       responsive: true,
       property: margin-bottom,
-      class: mb,
+      class: janes-mb,
       values: $negative-spacers
     ),
     "negative-margin-start": (
       responsive: true,
       property: margin-left,
-      class: ms,
+      class: janes-ms,
       values: $negative-spacers
     ),
     // Padding utilities
     "padding": (
       responsive: true,
       property: padding,
-      class: p,
+      class: janes-p,
       values: $spacers
     ),
     "padding-x": (
       responsive: true,
       property: padding-right padding-left,
-      class: px,
+      class: janes-px,
       values: $spacers
     ),
     "padding-y": (
       responsive: true,
       property: padding-top padding-bottom,
-      class: py,
+      class: janes-py,
       values: $spacers
     ),
     "padding-top": (
       responsive: true,
       property: padding-top,
-      class: pt,
+      class: janes-pt,
       values: $spacers
     ),
     "padding-end": (
       responsive: true,
       property: padding-right,
-      class: pe,
+      class: janes-pe,
       values: $spacers
     ),
     "padding-bottom": (
       responsive: true,
       property: padding-bottom,
-      class: pb,
+      class: janes-pb,
       values: $spacers
     ),
     "padding-start": (
       responsive: true,
       property: padding-left,
-      class: ps,
+      class: janes-ps,
       values: $spacers
     ),
     // Gap utility
     "gap": (
       responsive: true,
       property: gap,
-      class: gap,
+      class: janes-gap,
       values: $spacers
     ),
     "row-gap": (
       responsive: true,
       property: row-gap,
-      class: row-gap,
+      class: janes-row-gap,
       values: $spacers
     ),
     "column-gap": (
       responsive: true,
       property: column-gap,
-      class: column-gap,
+      class: janes-column-gap,
       values: $spacers
     ),
     // scss-docs-end utils-spacing
@@ -501,23 +518,23 @@ $utilities: map-merge(
     // scss-docs-start utils-text
     "font-family": (
       property: font-family,
-      class: font,
+      class: janes-font,
       values: (monospace: var(--#{$prefix}font-monospace))
     ),
     "font-size": (
       rfs: true,
       property: font-size,
-      class: fs,
+      class: janes-fs,
       values: $font-sizes
     ),
     "font-style": (
       property: font-style,
-      class: fst,
+      class: janes-fst,
       values: italic normal
     ),
     "font-weight": (
       property: font-weight,
-      class: fw,
+      class: janes-fw,
       values: (
         lighter: $font-weight-lighter,
         light: $font-weight-light,
@@ -530,7 +547,7 @@ $utilities: map-merge(
     ),
     "line-height": (
       property: line-height,
-      class: lh,
+      class: janes-lh,
       values: (
         1: 1,
         sm: $line-height-sm,
@@ -541,7 +558,7 @@ $utilities: map-merge(
     "text-align": (
       responsive: true,
       property: text-align,
-      class: text,
+      class: janes-text,
       values: (
         start: left,
         end: right,
@@ -550,16 +567,17 @@ $utilities: map-merge(
     ),
     "text-decoration": (
       property: text-decoration,
+      class: janes-text-decoration,
       values: none underline line-through
     ),
     "text-transform": (
       property: text-transform,
-      class: text,
+      class: janes-text,
       values: lowercase uppercase capitalize
     ),
     "white-space": (
       property: white-space,
-      class: text,
+      class: janes-text,
       values: (
         wrap: normal,
         nowrap: nowrap,
@@ -567,7 +585,7 @@ $utilities: map-merge(
     ),
     "word-wrap": (
       property: word-wrap word-break,
-      class: text,
+      class: janes-text,
       values: (break: break-word),
       rtl: false
     ),
@@ -575,7 +593,7 @@ $utilities: map-merge(
     // scss-docs-start utils-color
     "color": (
       property: color,
-      class: text,
+      class: janes-text,
       local-vars: (
         "text-opacity": 1
       ),
@@ -594,7 +612,7 @@ $utilities: map-merge(
     ),
     "text-opacity": (
       css-var: true,
-      class: text-opacity,
+      class: janes-text-opacity,
       values: (
         25: .25,
         50: .5,
@@ -604,14 +622,14 @@ $utilities: map-merge(
     ),
     "text-color": (
       property: color,
-      class: text,
+      class: janes-text,
       values: $utilities-text-emphasis-colors
     ),
     // scss-docs-end utils-color
     // scss-docs-start utils-links
     "link-opacity": (
       css-var: true,
-      class: link-opacity,
+      class: janes-link-opacity,
       state: hover,
       values: (
         10: .1,
@@ -623,7 +641,7 @@ $utilities: map-merge(
     ),
     "link-offset": (
       property: text-underline-offset,
-      class: link-offset,
+      class: janes-link-offset,
       state: hover,
       values: (
         1: .125em,
@@ -633,7 +651,7 @@ $utilities: map-merge(
     ),
     "link-underline": (
       property: text-decoration-color,
-      class: link-underline,
+      class: janes-link-underline,
       local-vars: (
         "link-underline-opacity": 1
       ),
@@ -646,7 +664,7 @@ $utilities: map-merge(
     ),
     "link-underline-opacity": (
       css-var: true,
-      class: link-underline-opacity,
+      class: janes-link-underline-opacity,
       state: hover,
       values: (
         0: 0,
@@ -661,7 +679,7 @@ $utilities: map-merge(
     // scss-docs-start utils-bg-color
     "background-color": (
       property: background-color,
-      class: bg,
+      class: janes-bg,
       local-vars: (
         "bg-opacity": 1
       ),
@@ -676,7 +694,7 @@ $utilities: map-merge(
     ),
     "bg-opacity": (
       css-var: true,
-      class: bg-opacity,
+      class: janes-bg-opacity,
       values: (
         10: .1,
         25: .25,
@@ -687,30 +705,31 @@ $utilities: map-merge(
     ),
     "subtle-background-color": (
       property: background-color,
-      class: bg,
+      class: janes-bg,
       values: $utilities-bg-subtle
     ),
     // scss-docs-end utils-bg-color
     "gradient": (
       property: background-image,
-      class: bg,
+      class: janes-bg,
       values: (gradient: var(--#{$prefix}gradient))
     ),
     // scss-docs-start utils-interaction
     "user-select": (
       property: user-select,
+      class: janes-user-select,
       values: all auto none
     ),
     "pointer-events": (
       property: pointer-events,
-      class: pe,
+      class: janes-pe,
       values: none auto,
     ),
     // scss-docs-end utils-interaction
     // scss-docs-start utils-border-radius
     "rounded": (
       property: border-radius,
-      class: rounded,
+      class: janes-rounded,
       values: (
         null: var(--#{$prefix}border-radius),
         0: 0,
@@ -725,7 +744,7 @@ $utilities: map-merge(
     ),
     "rounded-top": (
       property: border-top-left-radius border-top-right-radius,
-      class: rounded-top,
+      class: janes-rounded-top,
       values: (
         null: var(--#{$prefix}border-radius),
         0: 0,
@@ -740,7 +759,7 @@ $utilities: map-merge(
     ),
     "rounded-end": (
       property: border-top-right-radius border-bottom-right-radius,
-      class: rounded-end,
+      class: janes-rounded-end,
       values: (
         null: var(--#{$prefix}border-radius),
         0: 0,
@@ -755,7 +774,7 @@ $utilities: map-merge(
     ),
     "rounded-bottom": (
       property: border-bottom-right-radius border-bottom-left-radius,
-      class: rounded-bottom,
+      class: janes-rounded-bottom,
       values: (
         null: var(--#{$prefix}border-radius),
         0: 0,
@@ -770,7 +789,7 @@ $utilities: map-merge(
     ),
     "rounded-start": (
       property: border-bottom-left-radius border-top-left-radius,
-      class: rounded-start,
+      class: janes-rounded-start,
       values: (
         null: var(--#{$prefix}border-radius),
         0: 0,
@@ -797,7 +816,7 @@ $utilities: map-merge(
     // scss-docs-start utils-zindex
     "z-index": (
       property: z-index,
-      class: z,
+      class: janes-z,
       values: $zindex-levels,
     )
     // scss-docs-end utils-zindex
