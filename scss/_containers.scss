@@ -4,15 +4,15 @@
 
 @if $enable-container-classes {
   // Single container class with breakpoint max-widths
-  .container,
+  .janes-container,
   // 100% wide container at all breakpoints
-  .container-fluid {
+  .janes-container-fluid {
     @include make-container();
   }
 
   // Responsive containers that are 100% wide until a breakpoint
   @each $breakpoint, $container-max-width in $container-max-widths {
-    .container-#{$breakpoint} {
+    .janes-container-#{$breakpoint} {
       @extend .container-fluid;
     }
 
@@ -26,7 +26,7 @@
 
       @each $name, $width in $grid-breakpoints {
         @if ($extend-breakpoint) {
-          .container#{breakpoint-infix($name, $grid-breakpoints)} {
+          .janes-container#{breakpoint-infix($name, $grid-breakpoints)} {
             @extend %responsive-container-#{$breakpoint};
           }
 
