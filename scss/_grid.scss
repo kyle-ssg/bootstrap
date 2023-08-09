@@ -9,7 +9,7 @@
 }
 
 @if $enable-grid-classes {
-  .row {
+  .janes-row {
     @include make-row();
 
     > * {
